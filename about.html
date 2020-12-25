@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href="style.css">
+    <title>About Us</title>
+    <style>
+        body {
+            font-weight: 400;
+            color: #fff;
+            letter-spacing: 1px;
+            background: url('background pic/about.jpg') no-repeat;
+            background-size: cover;
+        }
+
+        .bdy {
+            text-align: center;
+            margin-left: 10%;
+            width: 80%;
+            height: 60%;
+
+        }
+
+        .bdy h1 {
+            margin-top: 15px;
+            text-align: center;
+            font-weight: 100px;
+            color: white;
+            padding-bottom: 10px;
+        }
+
+        .bdy h4 {
+            margin-top: 20px;
+            font-size: 18px;
+            text-align: center;
+            color: white;
+            padding-top: 8px;
+            line-height: 40px;
+        }
+
+        .contact {
+            margin-top: 25px;
+            margin-left: 38%;
+            width: 350px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="branding">
+                <img class="branding-logo" src="background pic/logo.png" width="150" height="60">
+            </div>
+            <label for="input-hamburger" class="hamburger "></label>
+            <input type="checkbox" id="input-hamburger" hidden>
+            <ul class="menu">
+                <li><a href="home.html" class="menu-link">Home</a></li>
+                <li class="has-dropdown">
+                    <a href="menu.html" class="menu-link">Menu
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="appetizer.html" class="menu-link">Appetizer</a></li>
+                        <li><a href="maindish.html" class="menu-link">Main Dish</a></li>
+                        <li><a href="dessert&drink.html" class="menu-link">Desserts & Drinks</a>
+                    </ul>
+                </li>
+                <li><a href="reservation.html" class="menu-link">Reservation</a></li>
+                <li><a href="gallery.html" class="menu-link">Gallery</a></li>
+                <li><a href="about.html" class="menu-link">About Us</a></li>
+                <li><a href="feedback.html" class="menu-link">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        var hamburger = document.querySelector(".hamburger");
+        hamburger.addEventListener("click", function () {
+            this.classList.toggle("close");
+        });
+    </script>
+
+    <div class="bdy">
+        <h1>Our Story</h1>
+        <hr>
+        <h4> This Restaurant is a dream come true for a bunch of friends sharing their sheer love for food
+            andexperimentation.<br>
+            One of it's kind in the port city of Chittagong, we opened our doors to you on the 1st of
+            September,2020.<br>
+            Our location inspires us to celebrate the amazing seafood that this city has to offer. <br>We are constantly
+            experimenting with both local and international flavors and constantly pushing boundaries whilst also
+            maintaining quality and hygiene to the highest standards.<br> We are grateful for all the love you have
+            given us so far.
+            <br>We hope to continue serving you with amazing, mouthwatering dishes for you, your friends and your
+            family.<br><br></h4>
+        <p style="text-align: center;font-family:Verdana;font-size: 25px;">Please give us a <a
+                style="text-decoration: none; color: #92a8d1" href="feedback.html">feedback</a>.<br> We would love to
+            hear from you. </p>
+    </div><br>
+    <div class="contact">
+        <h2>Contact Us</h2><hr>
+        <p style="padding-top: 6px;line-height: 25px;">PHONE: (+880) 1234-456789<br>
+            E-MAIL: infos@ourrestaurant.com.bd
+        </p>
+    </div>
+
+</body>
+
+</html>

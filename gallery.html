@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href="style.css">
+    <title>Restaurant Home Page</title>
+    <style>
+        .row {
+            display: flex;
+            padding: 0 4px;
+        }
+
+        /*five equal columns that sits next to each other */
+        .column {
+            flex: 20%;
+            max-width: 20%;
+            padding: 0 4px;
+        }
+
+        .column img {
+            margin-top: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="branding">
+                <img class="branding-logo" src="background pic/logo.png" width="150" height="60">
+            </div>
+            <label for="input-hamburger" class="hamburger "></label>
+            <input type="checkbox" id="input-hamburger" hidden>
+            <ul class="menu">
+                <li><a href="home.html" class="menu-link">Home</a></li>
+                <li class="has-dropdown">
+                    <a href="menu.html" class="menu-link">Menu
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="appetizer.html" class="menu-link">Appetizer</a></li>
+                        <li><a href="maindish.html" class="menu-link">Main Dish</a></li>
+                        <li><a href="dessert&drink.html" class="menu-link">Desserts & Drinks</a>
+                    </ul>
+                </li>
+                <li><a href="reservation.html" class="menu-link">Reservation</a></li>
+                <li><a href="gallery.html" class="menu-link">Gallery</a></li>
+                <li><a href="about.html" class="menu-link">About Us</a></li>
+                <li><a href="feedback.html" class="menu-link">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        var hamburger = document.querySelector(".hamburger");
+        hamburger.addEventListener("click", function () {
+            this.classList.toggle("close");
+        });
+    </script>
+
+    <div class="row">
+        <div class="column">
+            <img src="food pic/1.jpg" style="width:100%">
+            <img src="food pic/friedrice.jpg" style="width:100%">
+            <img src="food pic/mixed.jpg" style="width:100%">
+            <img src="food pic/lassi.jpg" style="width:100%">
+        </div>
+
+        <div class="column">
+            <img src="food pic/4.jpg" style="width:100%">
+            <img src="food pic/Awadhi-Mutton-Yakhni-Pulao.jpg" style="width:100%">
+            <img src="food pic/pudd.jpg" style="width:100%">
+            <img src="food pic/coffe.JPG" style="width:100%">
+        </div>
+
+        <div class="column">
+            <img src="food pic/burger2.jpg" style="width:100%">
+            <img src="food pic/seafood.jpg" style="width:100%">
+            <img src="food pic/ice.jpg" style="width:100%">
+            <img src="food pic/borhani.JPG" style="width:100%">
+        </div>
+
+        <div class="column">
+            <img src="food pic/2.jpg" style="width:100%">
+            <img src="food pic/chickenbirani.jpg" style="width:100%">
+            <img src="food pic/faluda.JPG" style="width:100%">
+            <img src="food pic/drinks.jpg" style="width:100%">
+        </div>
+
+        <div class="column">
+            <img src="food pic/3.jpg" style="width:100%">
+            <img src="food pic/pizza.jpg" style="width:100%">
+            <img src="food pic/firni.jpg" style="width:100%">
+            <img src="food pic/mint2.JPG" style="width:100%">
+        </div>
+
+    </div>
+
+    <div class="location"
+        style="margin-top: 90px; padding: 20px; width: 100%; background-color: rgb(0, 0, 0, 0.4); display: flex; flex-direction: row;">
+        <div style="width: 50%; float: left; text-align: center;">
+            <h2>Location</h2>
+            <p>Zakir Hossain by Lane,<br>
+                GEC, Chittagong.</p>
+        </div>
+        <div style="width: 50%; float: right; text-align: center;">
+            <h2>Contact Us</h2>
+            <p>PHONE: (+880) 1234-456789<br>
+                E-MAIL: infos@ourrestaurant.com.bd</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

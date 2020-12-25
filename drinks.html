@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href="style2.css">
+    <title>Drinks</title>
+    <style>
+        .bdy {
+            margin-top: 3%;
+            margin-left: 20%;
+            width: 60%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .title {
+            width: 260px;
+            text-align: center;
+        }
+
+        #demo {
+            margin-top: 4%;
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="branding">
+                <img class="branding-logo" src="background pic/logo.png" width="150" height="60">
+            </div>
+            <label for="input-hamburger" class="hamburger "></label>
+            <input type="checkbox" id="input-hamburger" hidden>
+            <ul class="menu">
+                <li><a href="home.html" class="menu-link">Home</a></li>
+                <li class="has-dropdown">
+                    <a href="menu.html" class="menu-link">Menu
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="appetizer.html" class="menu-link">Appetizer</a></li>
+                        <li><a href="maindish.html" class="menu-link">Main Dish</a></li>
+                        <li><a href="dessert&drink.html" class="menu-link">Desserts & Drinks</a>
+                    </ul>
+                </li>
+                <li><a href="reservation.html" class="menu-link">Reservation</a></li>
+                <li><a href="gallery.html" class="menu-link">Gallery</a></li>
+                <li><a href="about.html" class="menu-link">About Us</a></li>
+                <li><a href="feedback.html" class="menu-link">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        var hamburger = document.querySelector(".hamburger");
+        hamburger.addEventListener("click", function () {
+            this.classList.toggle("close");
+        });
+    </script>
+    <div class="bdy">
+        <div class="title">
+            <h1>Drinks</h1>
+            <hr>
+        </div><br><br>
+        <p id="demo"></p>
+        <script>
+            var dr = [{ item: "Fanta/Coke/Sprite", pr: 25 }, 
+                      { item: "Mint Lemonade", pr: 50 }, 
+                      { item: "Water(Large)", pr: 25 }, 
+                      { item: "Water(Small)", pr: 15 }, 
+                      { item: "Borhani", pr: 50 },
+                      { item: "Coffee", pr: 120 },
+                      { item: "Lassi", pr: 40 },];
+            var text = "", i;
+            for (i = 0; i < dr.length; i++) {
+                text += dr[i].item + "......................" + dr[i].pr + "<br><br>";
+            }
+            document.getElementById("demo").innerHTML = text;
+        </script>
+    </div>
+    <div class="location"
+        style="margin-top: 20px; padding: 20px; width: 100%; background-color: rgb(0, 0, 0, 0.4); display: flex; flex-direction: row;">
+        <div style="width: 50%; float: left; text-align: center;">
+            <h2>Location</h2>
+            <p>Zakir Hossain by Lane,<br>
+                GEC, Chittagong.</p>
+        </div>
+        <div style="width: 50%; float: right; text-align: center;">
+            <h2>Contact Us</h2>
+            <p>PHONE: (+880) 1234-456789<br>
+                E-MAIL: infos@ourrestaurant.com.bd</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

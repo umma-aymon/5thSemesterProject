@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href="reservation.css">
+    <title>Reservation</title>
+    <script>
+        function alrt() {
+            alert("Reservation complete!");
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="branding">
+                <img class="branding-logo" src="background pic/logo.png" width="150" height="60">
+            </div>
+            <label for="input-hamburger" class="hamburger "></label>
+            <input type="checkbox" id="input-hamburger" hidden>
+            <ul class="menu">
+                <li><a href="home.html" class="menu-link">Home</a></li>
+                <li class="has-dropdown">
+                    <a href="menu.html" class="menu-link">Menu
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="appetizer.html" class="menu-link">Appetizer</a></li>
+                        <li><a href="maindish.html" class="menu-link">Main Dish</a></li>
+                        <li><a href="dessert&drink.html" class="menu-link">Desserts & Drinks</a>
+                    </ul>
+                </li>
+                <li><a href="reservation.html" class="menu-link">Reservation</a></li>
+                <li><a href="gallery.html" class="menu-link">Gallery</a></li>
+                <li><a href="about.html" class="menu-link">About Us</a></li>
+                <li><a href="feedback.html" class="menu-link">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        var hamburger = document.querySelector(".hamburger");
+        hamburger.addEventListener("click", function () {
+            this.classList.toggle("close");
+        });
+    </script>
+
+    <div class="bdy">
+
+        <div class="column">
+            <div class="container1"><br>
+                <h2 style="text-align: center;color: white;font-size: 30px;">Time Open</h2><br>
+                <p id="rdemo">
+                    <h3 class="heading-days">Monday-Friday</h3>
+                    <p>7am - 11am (breakfast)</p>
+                    <p>11am - 10pm (lunch/dinner)</p><br>
+                    <h3 class="heading-days">Saturday and sunday</h3>
+                    <p>9am - 1am (breakfast)</p>
+                    <p>1am - 10pm (lunch/dinner)</p><br>
+                    <hr>
+                    <h4 class="heading-phone">Call Us: (+880) 1234-456789</h4>
+                </p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="container2"><br>
+                <h2 style="color: white;font-size: 30px;text-align:center;">Reservation Online</h2><br>
+                <form method="POST" action="reservation.php">
+                    <div class="form-field">
+                        <p>Your Name</p>
+                        <input type="text" name="cname" placeholder="Your Name">
+                    </div>
+                    <div class="form-field">
+                        <p>Your email</p>
+                        <input type="text" name="cmail" placeholder="Your Email">
+                    </div>
+                    <div class="form-field">
+                        <p>Date</p>
+                        <input type="date" name="dt">
+                    </div>
+                    <div class="form-field">
+                        <p>Time</p>
+                        <input type="time" name="tm">
+                    </div>
+                    <div class="form-field">
+                        <p>How many people?</p>
+                        <select name="select"
+                            style="background-color: rgba(128, 128, 128, .3); font:white; border: 2px solid #ccc; border-radius: 4px;">
+                            <option style=" background-color: rgba(128, 128, 128, 2.9);" value="1">1 person</option>
+                            <option style=" background-color: rgba(128, 128, 128, 2.9);" value="2">2 persons</option>
+                            <option style=" background-color: rgba(128, 128, 128, 2.9);" value="3">3 persons</option>
+                            <option style=" background-color: rgba(128, 128, 128, 2.9);" value="4">4 persons</option>
+                            <option style=" background-color: rgba(128, 128, 128, 2.9);" value="5">5 persons</option>
+                            <option style=" background-color: rgba(128, 128, 128, 2.9);" value="5+">5+ persons</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <p style="margin-top:5px;">Need high chair for baby?<span
+                                style="padding-left: 100px;">Yes&nbsp;</span>
+                            <input type="checkbox" name="chair" value="1"></p>
+                    </div> <br><br>
+                    <button onclick="alrt()" class="btn">Confirm Reservation</button>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

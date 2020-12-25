@@ -1,0 +1,326 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+}
+
+body {
+    color: #fff;
+    letter-spacing: 1px;
+    background: url('background pic/reservation.png') no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(2px);
+}
+
+.branding img {
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-left: 40px;
+}
+
+header {
+    margin-top: 20px;
+    background-color: rgb(0, 0, 0, 0.4);
+    padding-left: 1.5em;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 1em 1.5em;
+    font-weight: 400;
+}
+
+/* Styling submenu */
+.has-dropdown {
+    position: relative;
+}
+
+.submenu {
+    position: absolute;
+    left: 0;
+    background-color: rgb(0, 0, 0, 0.4);
+    white-space: nowrap;
+    padding: 1.5em 0;
+    min-width: 16em;
+    /* hide submenus */
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top center;
+    font-weight: 700;
+}
+
+.submenu>li>a {
+    padding: 0.8em 1.5em;
+}
+
+.submenu .submenu {
+    left: -100%;
+    top: 0;
+}
+
+.submenu .submenu .submenu {
+    left: -100%;
+    top: 0;
+}
+
+.menu>li:hover>a,
+.submenu>li:hover>a {
+    background: #ffffff44;
+}
+
+/* Arrows */
+.arrow {
+    width: 0.5em;
+    height: 0.5em;
+    display: inline-block;
+    vertical-align: middle;
+    border-left: 0.15em solid currentColor;
+    border-bottom: 0.15em solid currentColor;
+    transform: rotate(-45deg);
+    margin-top: -0.25em;
+    transition: transform 100ms ease-in-out;
+}
+
+/* Reveal  */
+.menu>li:hover>a+.submenu,
+.submenu>li:hover>a+.submenu {
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+/* ANIMATE aRROWS */
+.menu>li:hover>a>.arrow,
+.submenu>li:hover>a>.arrow {
+    transform: rotate(225deg);
+}
+
+@media only screen and (max-width: 50em) {
+    header {
+        padding: 1.5em 2em;
+    }
+
+    .menu {
+        flex-flow: column;
+        position: absolute;
+        background-color: rgb(0, 0, 0, 0.6);
+        top: 8em;
+        left: 0;
+        right: 0;
+        height: 80vh;
+        opacity: 0;
+        transform: scaleY(0);
+        transform-origin: top center;
+        transition: 200ms transform cubic-bezier(0.36, 0.4, 0.42, 1.48) 100ms,
+            100ms opacity ease-in-out;
+    }
+
+    .menu>li:hover>a+.submenu,
+    .submenu>li:hover>a+.submenu {
+        position: relative;
+    }
+
+    .hamburger {
+        width: 2em;
+        height: 0.25em;
+        display: block;
+        background-color: #fff;
+        position: relative;
+        cursor: pointer;
+        transition: 0.2s transform ease-in-out;
+    }
+
+    .hamburger::after,
+    .hamburger::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        background: inherit;
+        width: inherit;
+        height: inherit;
+        transition: 0.2s transform ease-in-out;
+    }
+
+    .hamburger::after {
+        top: 0.65em;
+    }
+
+    .hamburger::before {
+        bottom: 0.65em;
+    }
+
+    .close::after,
+    .close::before {
+        top: 0;
+        transition: 0.2s transform ease-in-out;
+    }
+
+    .close::before {
+        display: none;
+    }
+
+    .close {
+        transform: rotate(45deg);
+        transition: 0.2s transform ease-in-out;
+    }
+
+    .close::after {
+        transform: rotate(-90deg);
+    }
+
+    /* reveal menu */
+    input[type="checkbox"]:checked+.menu {
+        position: absolute;
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+
+.bdy {
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.column {
+    flex: 50%;
+}
+
+.container1 {
+    background-color: rgba(128, 128, 128, 0.3);
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 500px;
+    height: 510px;
+    margin-left: 250px;
+    border: 3px solid gray;
+    padding: 20px;
+    text-align: center;
+}
+
+.container2 {
+    background-color: rgb(128, 128, 128, 0.3);
+    width: 500px;
+    height: 510px;
+    padding: 15px 15px;
+    border: 3px solid gray;
+    text-align: center;
+}
+
+#rdemo {
+    width: 450px;
+    margin-left: 300px;
+    font-size: 25px;
+    color: white;
+    font-weight: 100;
+    margin-top: 2%;
+    text-align: center;
+}
+
+
+.heading-days {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.heading-phone {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+form p {
+    font-weight: 600;
+    font-size: 35px;
+}
+
+.form-field {
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type=text],
+input[type=email],
+input[type=date],
+input[type=time] {
+    background-color: rgba(128, 128, 128, 0.3);
+    padding: 6px 15px;
+    margin: 9px 6px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: white;
+}
+
+input::placeholder {
+    color: white;
+    font-style: italic;
+}
+
+.btn {
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    padding: 10px 30px;
+    border: none;
+    font-size: 18px;
+    border-radius: 100px;
+    box-shadow: 7px 10px 12px rgba(0, 0, 0, .2);
+    cursor: pointer;
+    /* mouse button er upor nile point kre*/
+    transition: all .3s;
+    /*button e hover howar time delay*/
+}
+
+.btn:hover {
+    transform: scale(1.03);
+    box-shadow: 10px 12px 15px rgba(0, 0, 0, .3);
+}
+
+.container2 p {
+    margin-left: 25px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.container2 select {
+    margin-top: 10px;
+    color: white;
+    height: 28px;
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width: 1400px) {
+    .bdy {
+        flex-direction: column;
+        padding-bottom: 2%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container1 {
+        margin-left: 0;
+    }
+
+    .column {
+        padding-bottom: 10px;
+    }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href="f.css">
+    <title>Feedback</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="branding">
+                <img class="branding-logo" src="background pic/logo.png" width="150" height="60">
+            </div>
+            <label for="input-hamburger" class="hamburger "></label>
+            <input type="checkbox" id="input-hamburger" hidden>
+            <ul class="menu">
+                <li><a href="home.html" class="menu-link">Home</a></li>
+                <li class="has-dropdown">
+                    <a href="menu.html" class="menu-link">Menu
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="appetizer.html" class="menu-link">Appetizer</a></li>
+                        <li><a href="maindish.html" class="menu-link">Main Dish</a></li>
+                        <li><a href="dessert&drink.html" class="menu-link">Desserts & Drinks</a>
+                    </ul>
+                </li>
+                <li><a href="reservation.html" class="menu-link">Reservation</a></li>
+                <li><a href="gallery.html" class="menu-link">Gallery</a></li>
+                <li><a href="about.html" class="menu-link">About Us</a></li>
+                <li><a href="feedback.html" class="menu-link">Feedback</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <script>
+        var hamburger = document.querySelector(".hamburger");
+        hamburger.addEventListener("click", function () {
+            this.classList.toggle("close");
+        });
+    </script>
+
+    <div class="mn" style="display: flex; align-items: center; justify-content: center;">
+        <div class="fbdy"><br>
+            <h1 style="text-align: center;"> Feel Free To Give Us a Review.</h1><br>
+            <div class="input-group">
+                <input type="text" placeholder=" ">
+                <label> Name </label>
+            </div>
+            <div class="input-group">
+                <input type="email" placeholder=" ">
+                <label> Email </label>
+            </div>
+            <div class="input-group">
+                <textarea rows="4" cols="50" placeholder=" "></textarea>
+                <label> Message </label>
+            </div>
+            <button onclick="alrt()" class="btn">Submit</button>
+            <script>
+                function alrt() {
+                    alert("Message received!\nThank you for your feedback.");
+                }
+            </script>
+
+        </div>
+    </div>
+    <script src="mn.js"></script>
+
+</body>
+
+</html>
